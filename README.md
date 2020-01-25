@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="http://34s0ft.com/" target="blank"><img src="./Logo.svg" width="420" alt="34s0ft Logo" /></a>
+</p>
+
+## Description
+
+Application that implements a chat app front-end in angular 8 using websocket
+
 # ChatClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
@@ -25,3 +33,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Stay in touch
+
+- Author - [Nevardo]

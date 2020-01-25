@@ -1,18 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { AngularMaterialModule } from "./angular-material/angular-material.module";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { FormsModule } from "@angular/forms";
+// import { RouteReuseStrategy } from "@angular/router";
+
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+
+import { SocketIoModule, SocketIoConfig } from "ngx-socket-io";
+import { HomeComponent } from "./home/home.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+const config: SocketIoConfig = { url: "http://localhost:3000", options: {} };
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
+  entryComponents: [],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocketIoModule.forRoot(config),
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}

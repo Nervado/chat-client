@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="chat-area">
+    <div class="content-header">
+      <div class="header"><h1>Live Chat</h1></div>
+
+      <div class="notification">
+        <p>The are currently {{ users }} new users logged in this chat room!</p>
+      </div>
+    </div>
+
+    <div class="msg-area">
+      <ul>
+        <li
+          *ngFor="let message of messages"
+          [className]="message.align ? 'left' : 'right'"
+        >
+          {{ message.message }}
+        </li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <div class="send-area">
+        <div class="message">
+          <textarea
+            class="msg"
+            spellcheck="true"
+            autoComplete="true"
+            autocorrect="true"
+            rows="1"
+            class="chat-input"
+            [(ngModel)]="message"
+            placeholder="type message..."
+            (keyup.enter)="addChat()"
+          >
+          </textarea>
+        </div>
+        <button class="icon" (click)="addChat()">
+          <mat-icon>send</mat-icon>
+        </button>
+      </div>
+    </footer>
+  </div>
+</div>
