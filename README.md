@@ -6,7 +6,7 @@
 
 Application that implements a chat app front-end in angular 8 using websocket
 
-# ChatClient
+## ChatClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
